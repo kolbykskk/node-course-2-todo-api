@@ -228,7 +228,10 @@ describe('POST /users', () => {
 
     request(app)
       .post('/users')
-      .send({email: 'kalafut@gmail.com', password: '123'})
+      .send({
+        email: 'kalafut@gmail.com',
+        password: '123'
+      })
       .expect(400)
       .end(done);
   });
